@@ -1,0 +1,10 @@
+.*
+!.gitignore
+!.travis.yml
+
+# Elixir
+/_build
+/deps
+erl_crash.dump
+*.ez
+

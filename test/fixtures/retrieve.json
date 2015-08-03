@@ -1,0 +1,21 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "url": "https://api.filepreviews.io/v2/previews/9ed9ff9e-a734-4901-9f75-4c229cd83498/"
+    },
+    "response": {
+      "body": "{\"id\":\"9ed9ff9e-a734-4901-9f75-4c229cd83498\",\"url\":\"https://api.filepreviews.io/v2/previews/9ed9ff9e-a734-4901-9f75-4c229cd83498/\",\"status\":\"success\",\"preview\": {\"page\": 1,\"size\": {\"height\":\"792\",\"width\":\"612\"},\"resized\": false,\"original_size\": {\"height\":\"792\",\"width\":\"612\"},\"url\":\"https://s3.amazonaws.com/demo.filepreviews.io/d8b062537d967a2dc44cac8849279c8b31d5b395128408af70ce59c1529fc32b/user_manual_original_1.png\",\"requested_size\":\"original\"},\"thumbnails\": [{\"page\": 1,\"size\": {\"height\":\"792\",\"width\":\"612\"},\"resized\": false,\"original_size\": {\"height\":\"792\",\"width\":\"612\"},\"url\":\"https://s3.amazonaws.com/demo.filepreviews.io/d8b062537d967a2dc44cac8849279c8b31d5b395128408af70ce59c1529fc32b/user_manual_original_1.png\",\"requested_size\":\"original\"}],\"original_file\": {\"name\":\"user_manual\",\"size\": 416905,\"total_pages\": 1,\"metadata\": null,\"extension\":\"pdf\",\"encoding\":\"binary\",\"mimetype\":\"application/pdf\",\"type\":\"application\"},\"user_data\": null}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "request": {
+      "body": "{\"url\":\"https://www.filepicker.io/api/file/0ehaqJwCTSq4P6jMrix6\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "url": "https://api.filepreviews.io/v2/previews/"
+    },
+    "response": {
+      "body": "{\"id\": \"42764e04-9094-467c-96b3-49d31ff4423d\",\"url\": \"https://api.filepreviews.io/v2/previews/42764e04-9094-467c-96b3-49d31ff4423d/\",\"status\": \"pending\",\"preview\": null,\"thumbnails\": null,\"original_file\": null,\"user_data\": null}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "request": {
+      "body": "{\"url\":\"https://www.filepicker.io/api/file/0ehaqJwCTSq4P6jMrix6\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "url": "https://api.filepreviews.io/v2/previews/"
+    },
+    "response": {
+      "body": "{\"error\":{\"type\":\"invalid_request_error\",\"param\":\"url\",\"message\":\"This field may not be blank.\"}}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "status_code": 400,
+      "type": "ok"
+    }
+  }
+]

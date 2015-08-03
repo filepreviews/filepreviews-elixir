@@ -1,0 +1,21 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "url": "https://api.filepreviews.io/v2/previews/123/"
+    },
+    "response": {
+      "body": "{\"error\":{\"message\":\"There is no preview with ID 123.\",\"type\":\"invalid_request_error\",\"param\":\"task_id\"}}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "status_code": 404,
+      "type": "ok"
+    }
+  }
+]
