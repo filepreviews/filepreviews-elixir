@@ -9,7 +9,7 @@ elixir:
 otp_release:
   - 17.0
   - 17.5
-  - 18
+  - 18.0
 
 env:
   - MIX_ENV=test
