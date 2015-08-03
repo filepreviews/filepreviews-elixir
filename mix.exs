@@ -33,4 +33,19 @@ defmodule FilePreviews.Mixfile do
       {:exvcr, "~> 0.4.0", only: :test}
     ]
   end
+
+  defp description do
+    """
+    FilePreviews.io API client and CLI for Elixir.
+    """
+  end
+
+  defp package do
+    [
+     files: ["lib", "mix.exs", "README.md", "LICENSE"],
+     contributors: ["José Padilla"],
+     licenses: ["MIT"],
+     links: %{"GitHub" => "https://github.com/GetBlimp/filepreviews-elixir"}
+    ]
+  end
 end
