@@ -1,5 +1,8 @@
 # FilePreviews.io
 
+[![build-status-image]][travis]
+[![pypi-version]][pypi]
+
 Elixir client library and CLI tool for the for the [FilePreviews.io][filepreviews] service. Generate image previews and metadata from almost any kind of file.
 
 ## Installation
@@ -37,5 +40,9 @@ params = %{metadata: ["exif"], pages: "1"}
 {status, response} = FilePreviews.generate("42764e04-9094-467c-96b3-49d31ff4423d")
 ```
 
+[build-status-image]: https://travis-ci.org/GetBlimp/filepreviews-elixir.svg?branch=master
+[travis]: http://travis-ci.org/GetBlimp/filepreviews-elixir?branch=master
+[hexpm-version]: https://img.shields.io/hexpm/v/filepreviews.svg
+[hexpm]: https://hex.pm/packages/filepreviews
 [filepreviews]: http://filepreviews.io
 [endpoint_docs]: http://filepreviews.io/docs/endpoints.html
