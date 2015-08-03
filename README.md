@@ -5,10 +5,15 @@
 
 Elixir client library and CLI tool for [FilePreviews.io][filepreviews]. Generate image previews and metadata from almost any kind of file.
 
+## TODO
+
+- Implement CLI
+- Add docs
+
 ## Installation
 
 ```elixir
-{:filepreviews, "~> 1.0.0"}
+{:filepreviews, "~> 0.0.1"}
 ```
 
 ## Usage
