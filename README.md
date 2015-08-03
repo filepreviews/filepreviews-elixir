@@ -1,9 +1,9 @@
 # FilePreviews.io
 
 [![build-status-image]][travis]
-[![pypi-version]][pypi]
+[![hexpm-version]][hexpm]
 
-Elixir client library and CLI tool for the for the [FilePreviews.io][filepreviews] service. Generate image previews and metadata from almost any kind of file.
+Elixir client library and CLI tool for [FilePreviews.io][filepreviews]. Generate image previews and metadata from almost any kind of file.
 
 ## Installation
 
