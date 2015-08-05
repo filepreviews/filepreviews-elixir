@@ -4,7 +4,7 @@ defmodule FilePreviews.Mixfile do
   def project do
     [
       app: :filepreviews,
-      version: "0.0.1",
+      version: "1.0.0",
       elixir: "~> 1.0",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
@@ -34,13 +34,14 @@ defmodule FilePreviews.Mixfile do
     [
       {:httpoison, "~> 0.7.1"},
       {:poison, "~> 1.4.0"},
-      {:exvcr, "~> 0.4.0", only: :test}
+      {:exvcr, "~> 0.4.0", only: :test},
+      {:ex_doc, "~> 0.7", only: :dev}
     ]
   end
 
   defp description do
     """
-    FilePreviews.io API client and CLI for Elixir.
+    FilePreviews.io API client library for Elixir.
     """
   end
 

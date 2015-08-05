@@ -1,4 +1,6 @@
 defmodule FilePreviews.Client do
+  @moduledoc false
+
   use HTTPoison.Base
 
   @url "https://api.filepreviews.io/v2"

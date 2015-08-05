@@ -3,17 +3,12 @@
 [![build-status-image]][travis]
 [![hexpm-version]][hexpm]
 
-Elixir client library and CLI tool for [FilePreviews.io][filepreviews]. Generate image previews and metadata from almost any kind of file.
-
-## TODO
-
-- Implement CLI
-- Add docs
+Elixir client library for [FilePreviews.io][filepreviews]. Generate image previews and metadata from almost any kind of file.
 
 ## Installation
 
 ```elixir
-{:filepreviews, "~> 0.0.1"}
+{:filepreviews, "~> 1.0.0"}
 ```
 
 ## Usage
