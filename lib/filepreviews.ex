@@ -113,6 +113,10 @@ defmodule FilePreviews do
     FilePreviews.Client.get("/previews/#{id}/")
   end
 
+  def version() do
+    Mix.Project.config[:version]
+  end
+
   defp config() do
     Agent.get(__MODULE__, fn(state) -> state end)
   end

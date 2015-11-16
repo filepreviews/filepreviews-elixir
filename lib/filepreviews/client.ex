@@ -4,7 +4,27 @@ defmodule FilePreviews.Client do
   use HTTPoison.Base
 
   @url "https://api.filepreviews.io/v2"
-  @headers ["Content-Type": "application/json"]
+
+  def headers do
+    {uname, _} = System.cmd("uname", ["-a"])
+    {_, os_name} = :os.type()
+
+    client_ua = %{
+      "lang": "elixir",
+      "publisher": "filepreviews",
+      "bindings_version": FilePreviews.version,
+      "lang_version": System.version,
+      "platform": to_string(os_name),
+      "uname": String.rstrip(uname, ?\n)
+    }
+
+    [
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+      "User-Agent": "FilePreviews/v2 ElixirBindings/#{FilePreviews.version}",
+      "X-FilePreviews-Client-User-Agent": client_ua |> Poison.encode!
+    ]
+  end
 
   def options do
     [
@@ -30,12 +50,12 @@ defmodule FilePreviews.Client do
   end
 
   def get(url) do
-    get(url, @headers, options)
+    get(url, headers, options)
     |> handle_response
   end
 
   def post(url, body) do
-    post(url, body, @headers, options)
+    post(url, body, headers, options)
     |> handle_response
   end
 

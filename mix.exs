@@ -4,7 +4,7 @@ defmodule FilePreviews.Mixfile do
   def project do
     [
       app: :filepreviews,
-      version: "1.0.0",
+      version: "1.0.1",
       elixir: "~> 1.0",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
@@ -48,7 +48,7 @@ defmodule FilePreviews.Mixfile do
   defp package do
     [
      files: ["lib", "mix.exs", "README.md", "LICENSE"],
-     contributors: ["José Padilla"],
+     maintainers: ["José Padilla"],
      licenses: ["MIT"],
      links: %{"GitHub" => "https://github.com/GetBlimp/filepreviews-elixir"}
     ]
