@@ -37,7 +37,7 @@ params = %{metadata: ["exif"], pages: "1"}
 ### Retrieve
 
 ```elixir
-{status, response} = FilePreviews.generate("42764e04-9094-467c-96b3-49d31ff4423d")
+{status, response} = FilePreviews.retrieve("42764e04-9094-467c-96b3-49d31ff4423d")
 ```
 
 [build-status-image]: https://travis-ci.org/GetBlimp/filepreviews-elixir.svg?branch=master
