@@ -33,9 +33,9 @@ defmodule FilePreviews.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.7.1"},
-      {:poison, "~> 1.4.0"},
+      {:poison, "~> 3.1.0"},
       {:exvcr, "~> 0.4.0", only: :test},
-      {:ex_doc, "~> 0.7", only: :dev}
+      {:ex_doc, "~> 0.19.1", only: :dev}
     ]
   end
 
