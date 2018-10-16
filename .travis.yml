@@ -3,20 +3,14 @@ language: elixir
 sudo: false
 
 elixir:
-  - 1.0.0
-  - 1.0.5
+  - 1.6
+  - 1.7
 
 otp_release:
-  - 17.0
-  - 17.5
   - 18.0
-
-matrix:
-  exclude:
-    - elixir: 1.0.0
-      otp_release: 17.5
-    - elixir: 1.0.0
-      otp_release: 18.0
+  - 19.0
+  - 20.0
+  - 21.0
 
 env:
   - MIX_ENV=test
