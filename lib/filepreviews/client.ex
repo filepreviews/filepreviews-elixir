@@ -10,26 +10,26 @@ defmodule FilePreviews.Client do
     {_, os_name} = :os.type()
 
     client_ua = %{
-      "lang": "elixir",
-      "publisher": "filepreviews",
-      "bindings_version": FilePreviews.version,
-      "lang_version": System.version,
-      "platform": to_string(os_name),
-      "uname": String.rstrip(uname, ?\n)
+      lang: "elixir",
+      publisher: "filepreviews",
+      bindings_version: FilePreviews.version(),
+      lang_version: System.version(),
+      platform: to_string(os_name),
+      uname: String.rstrip(uname, ?\n)
     }
 
     [
       "Content-Type": "application/json",
-      "Accept": "application/json",
-      "User-Agent": "FilePreviews/v2 ElixirBindings/#{FilePreviews.version}",
-      "X-FilePreviews-Client-User-Agent": client_ua |> Poison.encode!
+      Accept: "application/json",
+      "User-Agent": "FilePreviews/v2 ElixirBindings/#{FilePreviews.version()}",
+      "X-FilePreviews-Client-User-Agent": client_ua |> Poison.encode!()
     ]
   end
 
   def options do
     [
       hackney: [
-        basic_auth: {FilePreviews.api_key, FilePreviews.api_secret}
+        basic_auth: {FilePreviews.api_key(), FilePreviews.api_secret()}
       ]
     ]
   end
@@ -39,14 +39,15 @@ defmodule FilePreviews.Client do
   end
 
   def process_request_body(body) when body == "", do: ""
+
   def process_request_body(body) do
     Enum.into(body, %{})
-    |> Poison.encode!
+    |> Poison.encode!()
   end
 
   def process_response_body(body) do
     body
-    |> Poison.decode!
+    |> Poison.decode!()
   end
 
   def get(url) do
@@ -65,14 +66,16 @@ defmodule FilePreviews.Client do
         cond do
           code == 200 ->
             {:ok, body}
+
           code == 201 ->
             {:ok, body}
+
           true ->
             {:error, body}
         end
+
       {:error, %HTTPoison.Error{reason: reason}} ->
         {:error, reason}
     end
   end
-
 end

@@ -6,12 +6,12 @@ defmodule FilePreviews.Mixfile do
       app: :filepreviews,
       version: "1.0.1",
       elixir: "~> 1.0",
-      build_embedded: Mix.env == :prod,
-      start_permanent: Mix.env == :prod,
-      deps: deps,
-      description: description,
-      package: package,
-   ]
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      deps: deps(),
+      description: description(),
+      package: package()
+    ]
   end
 
   # Configuration for the OTP application
@@ -47,10 +47,10 @@ defmodule FilePreviews.Mixfile do
 
   defp package do
     [
-     files: ["lib", "mix.exs", "README.md", "LICENSE"],
-     maintainers: ["José Padilla"],
-     licenses: ["MIT"],
-     links: %{"GitHub" => "https://github.com/GetBlimp/filepreviews-elixir"}
+      files: ["lib", "mix.exs", "README.md", "LICENSE"],
+      maintainers: ["José Padilla"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/GetBlimp/filepreviews-elixir"}
     ]
   end
 end
