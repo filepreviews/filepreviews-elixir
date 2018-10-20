@@ -48,7 +48,7 @@ defmodule FilePreviews do
   @doc """
   Starts FilePreviews process with the given api_key and api_secret.
   """
-  @spec new(binary, binary) :: { FilePreviews.status, pid }
+  @spec new(binary, binary) :: {FilePreviews.status(), pid}
   def new(api_key, api_secret) do
     %Config{api_key: api_key, api_secret: api_secret}
     |> new
@@ -57,7 +57,7 @@ defmodule FilePreviews do
   @doc """
   Starts FilePreviews process with the config.
   """
-  @spec new(FilePreviews.Config.t) :: { FilePreviews.status, pid }
+  @spec new(FilePreviews.Config.t()) :: {FilePreviews.status(), pid}
   def new(config) do
     Agent.start_link(fn -> config end, name: __MODULE__)
   end
@@ -81,7 +81,7 @@ defmodule FilePreviews do
   @doc """
   Generates a preview for a given URL and params.
   """
-  @spec generate(binary, map) :: FilePreviews.response
+  @spec generate(binary, map) :: FilePreviews.response()
   def generate(url, params \\ %{}) do
     params = Dict.merge(%{url: url}, params)
     size = Dict.get(params, "size")
@@ -108,16 +108,16 @@ defmodule FilePreviews do
   @doc """
   Retrieves a preview with a given ID.
   """
-  @spec retrieve(binary) :: FilePreviews.response
+  @spec retrieve(binary) :: FilePreviews.response()
   def retrieve(id) do
     FilePreviews.Client.get("/previews/#{id}/")
   end
 
   def version() do
-    Mix.Project.config[:version]
+    Mix.Project.config()[:version]
   end
 
   defp config() do
-    Agent.get(__MODULE__, fn(state) -> state end)
+    Agent.get(__MODULE__, fn state -> state end)
   end
 end
