@@ -45,4 +45,4 @@ params = %{metadata: ["exif"], pages: "1"}
 [hexpm-version]: https://img.shields.io/hexpm/v/filepreviews.svg
 [hexpm]: https://hex.pm/packages/filepreviews
 [filepreviews]: http://filepreviews.io
-[endpoint_docs]: http://filepreviews.io/docs/endpoints.html
+[endpoint_docs]: https://filepreviews.io/docs/endpoints/
